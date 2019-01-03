@@ -10,7 +10,7 @@ RUN apt-get update -yqq \
 # Install mysql driver
 # Here you can install any other extension that you need
 
-# RUN docker-php-ext-install pdo_mysql gd
+RUN docker-php-ext-enable pdo_mysql gd
 
 #RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
 #	php composer-setup.php
