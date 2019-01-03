@@ -5,7 +5,7 @@ MAINTAINER Stefan Warnat <sysadmin@redoo-networks.com>
 ENV TIMEZONE=Europe/Berlin
 
 RUN apt-get update -yqq \
-	apt-get install zip lftp -yqq
+	&& apt-get install zip lftp -yqq
 
 # Install mysql driver
 # Here you can install any other extension that you need
@@ -18,7 +18,7 @@ RUN apt-get update -yqq \
 	
 # Install phpunit, the tool that we will use for testing
 # RUN curl --location --output /usr/local/bin/phpunit https://phar.phpunit.de/phpunit.phar \
-#	chmod +x /usr/local/bin/phpunit
+#	&& chmod +x /usr/local/bin/phpunit
 
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["php", "-a"]
