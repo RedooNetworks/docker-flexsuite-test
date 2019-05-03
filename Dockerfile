@@ -5,7 +5,7 @@ MAINTAINER Stefan Warnat <sysadmin@redoo-networks.com>
 ENV TIMEZONE=Europe/Berlin
 
 RUN apt-get update -yqq \
-	&& apt-get install zip lftp -yqq
+	&& apt-get install zip lftp python-pip -yqq
 
 # Install mysql driver
 # Here you can install any other extension that you need
